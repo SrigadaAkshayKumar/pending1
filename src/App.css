@@ -45,7 +45,9 @@ body {
 .header-content h1 {
   margin: 0;
 }
-
+.logo img {
+  cursor: pointer;
+}
 nav ul {
   list-style: none;
   margin: 0;
@@ -521,4 +523,104 @@ nav ul li {
 
 .footer-bottom p {
   margin: 0;
+}
+.foot-data p {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+.foot-data {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact page css */
+
+.contact-container {
+  color: var(--text-color);
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-formm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-form1 {
+  background-color: #333; /* Dark gray for card background */
+  color: #fff; /* White text */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form1 h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.contact-form1 p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact-formm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-formm label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  width: 91%;
+}
+
+.contact-formm input,
+.contact-formm textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444; /* Darker gray for input background */
+  color: #fff; /* White text in inputs */
+}
+
+.contact-formm button {
+  padding: 10px;
+  background-color: #e63946; /* Red button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-formm button:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* careers page css */
+
+.careers-container {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+.careers-page {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

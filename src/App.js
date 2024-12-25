@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/Landingpage"; // Assuming this is your landing page component
 import Contact from "./components/Contact";
 import Careers from "./components/Careers";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }
