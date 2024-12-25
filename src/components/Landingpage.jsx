@@ -192,7 +192,7 @@ function Landingpage() {
             </div>
             <div>
               <h3>Web Development</h3>
-              <p>Expert consulting for healthcare organizations.</p>
+              <p>Expert .</p>
             </div>
           </div>
           <div className="card">
