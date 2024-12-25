@@ -1,12 +1,16 @@
 import React from "react";
+
+import Logo from "./data/Logo.png";
 import { Link } from "react-router-dom";
+
 
 function Contact() {
   return (
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-column">
-          <img src="logo.png" alt="Logo" className="footer-logo" />
+          <a href="/">
+          <img src={Logo} alt="Logo" /> </a>
         </div>
 
         <div className="footer-column">
@@ -27,19 +31,19 @@ function Contact() {
         <div className="footer-column">
           <h3>Contact Us</h3>
           <p>
-            Email:
+            Email  : 
             <a href="mailto:pendingofficial@gmail.com">
-              pendingofficial@gmail.com
+               pendingofficial@gmail.com
             </a>
           </p>
           <p>
-            Phone: <a href="tel:+919110326779">+91 9260345779</a>
+            Phone : <a href="tel:+919110326779">+91 9260345779</a>
           </p>
         </div>
       </div>
       <div className="footer-bottom">
         <div className="foot-data">
-          <p>Terms & Conditions</p>
+          <p class>Terms & Conditions</p>
           <p>Privacy Policy</p>
           <p>Refund Policy</p>
         </div>

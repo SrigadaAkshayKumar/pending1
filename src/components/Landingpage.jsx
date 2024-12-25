@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import videoSrc from "./data/home_video.mp4";
 import image1 from "./data/image1.png";
 import Logo from "./data/Logo.png";
+import Log from "./data/works/Log.png"; 
 import projects from "./projects.json";
 import { Link } from "react-router-dom";
 
@@ -131,7 +132,7 @@ function Landingpage() {
         <div className="header-content">
           <div className="logo">
             <a href="/">
-              <img src="" alt="Logo" />
+              <img src={Logo} alt="Logo" />
             </a>
           </div>
           <div className="header-right">
@@ -187,7 +188,7 @@ function Landingpage() {
         <div className="service-cards" ref={serviceCardsRef}>
           <div className="card">
             <div>
-              <img src="" alt="img" />
+              <img src={Log} alt="img" />
             </div>
             <div>
               <h3>Web Development</h3>
@@ -196,7 +197,7 @@ function Landingpage() {
           </div>
           <div className="card">
             <div>
-              <img src="" alt="img" />
+              <img src="./works/Icon.png" alt="img" />
             </div>
             <div>
               <h3>Data Analysis</h3>
@@ -225,48 +226,15 @@ function Landingpage() {
             <div>
               <img src="" alt="img" />
             </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-        </div>
+           
+           
+          
+            
+          
+            
+            
+          
+        </div></div>
         <button className="scroll-button right" onClick={scrollRight}>
           &#8250;
         </button>
