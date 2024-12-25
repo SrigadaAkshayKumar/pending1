@@ -1,5 +1,6 @@
 import React from "react";
 import jobs from "./internsips.json";
+import Logo from "./data/Logo.png";
 import { Link } from "react-router-dom";
 
 function Careers() {
@@ -8,7 +9,9 @@ function Careers() {
       <header className="header">
         <div className="header-content">
           <div className="logo">
-            <img src="" alt="Logo" />
+          <a href="/">
+            <img src={Logo} alt="Logo" />
+          </a>
           </div>
           <div className="header-right">
             <nav>

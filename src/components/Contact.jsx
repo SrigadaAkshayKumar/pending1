@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./data/Logo.png";
 
 function Contact() {
   return (
@@ -7,7 +8,9 @@ function Contact() {
       <header className="header">
         <div className="header-content">
           <div className="logo">
-            <img src="" alt="Logo" />
+          <a href="/">
+            <img src={Logo} alt="Logo" />
+          </a>
           </div>
           <div className="header-right">
             <nav>

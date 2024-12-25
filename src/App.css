@@ -7,7 +7,7 @@
   --background-color: #111122; /* Dark background */
   --text-color: #fff; /* White text */
   --light-text-color: #ccc; /* Light gray text */
-  --card-background-color: #f4f4f4; /* Light gray card background */
+  --card-background-color: #5271ff; /* Light gray card background */
   /* --card-shadow: rgba(222, 245, 14, 0.1); Card shadow */
   --hover-card-shadow: rgba(0, 0, 0, 0.2); /* Hover shadow for cards */
   --footer-background-color: #111; /* Dark footer background */
@@ -130,6 +130,9 @@ nav ul li {
   scroll-behavior: smooth;
   padding: 10px 50px;
   color: var(--background-color);
+  img{
+    width: 120px;
+  }
 }
 
 .service-cards::-webkit-scrollbar {
@@ -526,7 +529,8 @@ nav ul li {
 }
 .foot-data p {
   padding: 10px 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding-bottom: 15px;
 }
 .foot-data {
   display: flex;
