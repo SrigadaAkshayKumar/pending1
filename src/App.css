@@ -1,7 +1,14 @@
 /* styles.css */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 /* Define color variables */
 :root {
   --secondary-color: #007bff; /* Blue */
@@ -129,8 +136,8 @@ nav ul a:hover {
   padding: 20px; /* Space inside the container */
 }
 .technology-solutions1 {
-  width: 50%;
-  padding: 2rem 6rem;
+  width: 60%;
+  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,12 +153,14 @@ nav ul a:hover {
 }
 .technology-solutions2 {
   width: 50%;
-  align-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .technology-solutions2 img {
-  width: 50%;
-  padding: 0 8rem;
+  height: 350px;
+  width: 350px;
+  padding: 0;
 }
 
 .sec-services {
@@ -201,12 +210,12 @@ nav ul a:hover {
 .scroll-button {
   font-size: 3rem;
   position: absolute;
-  top: 180%;
+  top: 188%;
   transform: translateY(-50%);
   background: var(--background-color);
   color: var(--blue-hover);
   border: none;
-  padding: 8px 15px;
+  padding: 5px 10px;
   cursor: pointer;
   z-index: 10;
   border-radius: 10%;
@@ -276,6 +285,15 @@ nav ul a:hover {
 }
 
 /* Our work */
+.sec-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec-flow h1 {
+  font-size: 3rem;
+  padding-bottom: 2.5rem;
+}
 
 /* Projects Section Styles */
 .projects-section {
@@ -283,9 +301,21 @@ nav ul a:hover {
   flex-direction: column;
   padding: 50px 0;
   background-color: var(--background-color);
-  text-align: center;
+  align-items: center;
 }
-
+.toggle-button {
+  margin-top: 2rem;
+  padding: 0.8rem 0.5rem;
+  width: 10%;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--cards-color);
+}
+.toggle-button:hover {
+  background-color: var(--blue-hover);
+}
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -342,18 +372,19 @@ nav ul a:hover {
 .project-card:hover .project-overlay {
   opacity: 1;
 }
-
+.project-details {
+  padding: 2rem;
+  margin: 0;
+}
 .project-details h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
   color: #fff;
 }
 
 .project-details p {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
-
 .project-link {
   color: #fff;
   background-color: #007bff;
@@ -424,7 +455,7 @@ nav ul a:hover {
 }
 
 .contact-form form .phone-input select {
-  width: 10%;
+  width: 12%;
   padding: 0 5px;
   border: none;
   height: 46px;
@@ -433,13 +464,13 @@ nav ul a:hover {
   color: var(--text-color);
 }
 .phone-input {
-  width: 94%;
+  width: 90%;
 }
 .message-box {
   height: 80px;
 }
 .contact-form form button {
-  width: 95%;
+  width: 90%;
   padding: 12px;
   background-color: var(--cards-color);
   color: var(--background-color);
@@ -590,15 +621,16 @@ nav ul a:hover {
 .footer-column p {
   color: var(--text-color);
   font-size: 1rem;
-  margin: 10px 0;
-  line-height: 1.5;
+  margin-top: 1rem;
 }
 .footer-column p:hover {
   color: rgb(168, 164, 164);
 }
+
 .footer-column img.footer-logo {
   max-width: 150px;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 .footer-column ul {
@@ -638,9 +670,13 @@ nav ul a:hover {
 .footer-bottom p {
   margin: 0;
 }
-.foot-data p {
+.foot-data a {
   padding: 10px 15px;
   font-size: 1rem;
+  cursor: pointer;
+}
+.foot-data a:hover {
+  color: rgb(168, 164, 164);
 }
 .foot-data {
   display: flex;
@@ -717,15 +753,21 @@ nav ul a:hover {
   height: 100%;
   background: var(--background-color);
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form {
-  max-width: 50%;
-  margin: 0 auto;
+  margin: 2rem 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #484747b4;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(255, 253, 253, 0.1);
 }
 
 .title {
@@ -748,11 +790,11 @@ nav ul a:hover {
 
 .field input,
 .field select {
-  padding: 0.8rem 0.5rem;
+  padding: 0.8rem 0.6rem;
   color: var(--text-color);
   background-color: #484747b4;
   border: none;
-  width: 80%;
+  width: 100%;
   border-radius: 4px;
 }
 
@@ -760,7 +802,15 @@ nav ul a:hover {
   display: flex;
   gap: 1.5rem;
 }
-
+.field1 {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  padding: 1rem 0;
+}
+.file-upload {
+  padding: 0.4rem 0;
+}
 .radio {
   display: flex;
   align-items: center;
@@ -786,4 +836,196 @@ nav ul a:hover {
 
 .btn:hover {
   background: #357abd;
+}
+
+/* Responsive content */
+
+@media (max-width: 750px) {
+  .header-content {
+    width: 90%;
+  }
+  nav ul {
+    gap: 2rem;
+  }
+  .overlay-content img {
+    width: 700px;
+  }
+  .technology-solutions1 {
+    padding: 1rem 0;
+    width: 80%;
+  }
+  .technology-solutions2 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .technology-solutions-12 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .technology-solutions2 img {
+    height: 300px;
+    width: 320px;
+    padding: 0;
+  }
+  .technology-solutions1 p {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .scroll-button {
+    top: 220%;
+  }
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+  .stats-section h2 {
+    font-size: 1.6rem;
+  }
+  .stat-item h1 {
+    font-size: 4rem;
+  }
+  .projects-section {
+    padding: 2rem 0;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form form .phone-input select {
+    width: 20%;
+    padding: 0 5px;
+  }
+  .phone-input {
+    width: 90%;
+  }
+  .contact-form form button {
+    width: 90%;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .icons {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .overlay-content img {
+    width: 500px;
+  }
+  .overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-card {
+    height: 280px;
+    width: 320px;
+  }
+  .faq-sec {
+    padding: 2.5rem 0;
+  }
+  .faq-sec h2 {
+    font-size: 1.8rem;
+  }
+  .footer-top {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2.5rem;
+  }
+  .footer-column {
+    flex: none;
+  }
+  .form-container {
+    padding: 0;
+  }
+  .form {
+    width: 90%;
+    padding: 2rem;
+  }
+  .toggle-button {
+    width: 40%;
+  }
+}
+@media (max-width: 360px) {
+  .overlay-content {
+    width: 100%;
+  }
+  .overlay-content img {
+    width: 100%;
+  }
+  .header-content {
+    width: 100%;
+  }
+  .video-section {
+    padding: 0 0.1rem;
+  }
+  nav ul a {
+    font-size: 1rem;
+  }
+  nav ul {
+    gap: 1.2rem;
+    padding-right: 1rem;
+  }
+  .technology-solutions1 h1 {
+    font-size: 2.2rem;
+  }
+  .sec-services h1 {
+    font-size: 2.2rem;
+    padding: 2rem 0;
+  }
+  .scroll-button {
+    top: 245%;
+  }
+  .stats-section {
+    padding: 2rem 0.8rem;
+  }
+  .stats-section h2 {
+    font-size: 1.2rem;
+  }
+  .stat-item h1 {
+    font-size: 3.5rem;
+  }
+  .stat-item p {
+    font-size: 0.8rem;
+  }
+  .contact-section {
+    width: 90%;
+  }
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
+  }
+  .contact-form form button {
+    width: 100%;
+  }
+  .phone-input {
+    width: 100%;
+  }
+  .contact-info h2 {
+    font-size: 1.7rem;
+  }
+  .faq-sec h2 {
+    font-size: 1.5rem;
+  }
+  .faq-section {
+    width: 100%;
+  }
+  .faq-item .faq-question {
+    font-size: 1rem;
+  }
+  .careers-page h1 {
+    font-size: 2.2rem;
+  }
+  .careers-page h2 {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }

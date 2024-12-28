@@ -5,11 +5,11 @@ function Contact() {
     <footer className="footer">
       <div className="footer-bottom">
         <div className="foot-data">
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
-          <p>Refund Policy</p>
+          <a>Terms & Conditions</a>
+          <a>Privacy Policy</a>
+          <a>Signup For Newsletter</a>
         </div>
-        <p>&copy; PENDING 2024 | All rights reserved</p>
+        <p>&copy; elevix 2024 | All rights reserved</p>
       </div>
     </footer>
   );

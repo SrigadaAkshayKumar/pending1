@@ -55,6 +55,13 @@ function Landingpage() {
     }
   };
 
+  const [showAll, setShowAll] = useState(false);
+
+  // Toggle between showing all projects or only the first 3
+  const toggleProjects = () => {
+    setShowAll((prevState) => !prevState);
+  };
+
   const startAutoScroll = () => {
     scrollInterval.current = setInterval(() => {
       if (serviceCardsRef.current) {
@@ -319,6 +326,9 @@ function Landingpage() {
 
       {/* Partners Section */}
       <section className="sec-flow">
+        <div>
+          <h1>Work Flow</h1>
+        </div>
         <div className="partner-logos">
           <img src={Projectflow} alt="image" />
         </div>
@@ -359,7 +369,7 @@ function Landingpage() {
       <section id="work" className="projects-section">
         <h2 className="section-title">Our Work</h2>
         <div className="projects-container">
-          {projects.map((project, index) => (
+          {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
             <div className="project-card" key={index}>
               <img
                 src={images[project.image]}
@@ -386,6 +396,9 @@ function Landingpage() {
             </div>
           ))}
         </div>
+        <button className="toggle-button" onClick={toggleProjects}>
+          {showAll ? "Show Less" : "View More"}
+        </button>
       </section>
 
       {/* contact form Section */}
@@ -423,10 +436,10 @@ function Landingpage() {
               <strong>Address:</strong> Hyderabad, India
             </p>
             <p>
-              <strong>Phone:</strong> +91 938326779
+              <strong>Phone:</strong> +91 9346011959
             </p>
             <p>
-              <strong>Email:</strong> pending@gmail.com
+              <strong>Email:</strong> contactelevix@gmail.com
             </p>
             <p>
               <strong>Follow us:</strong>
@@ -492,7 +505,9 @@ function Landingpage() {
       <section className="footer">
         <div className="footer-top">
           <div className="footer-column">
-            <img src={Logo} alt="Logo" className="footer-logo" />
+            <a href="/">
+              <img src={Logo} alt="Logo" className="footer-logo" />
+            </a>
             <div className="icons">
               <a
                 href="https://www.linkedin.com"
@@ -546,13 +561,14 @@ function Landingpage() {
           <div className="footer-column">
             <h3>Contact Us</h3>
             <p>
-              Email:
-              <a href="mailto:pendingofficial@gmail.com">
-                pendingofficial@gmail.com
+              <strong>Email :&nbsp;&nbsp;</strong>
+              <a href="mailto:contactelevix@gmail.com">
+                contactelevix@gmail.com
               </a>
             </p>
             <p>
-              Phone: <a href="tel:+919110326779">+91 9260345779</a>
+              <strong>Phone :&nbsp;</strong>
+              <a href="tel:+919110326779">+91 9346011959</a>
             </p>
           </div>
         </div>

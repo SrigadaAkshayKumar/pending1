@@ -39,8 +39,8 @@ const ApplicationForm = () => {
             <div className="header-right">
               <nav>
                 <ul>
-                  <Link to="/">
-                    <a>Home</a>
+                  <Link to="/careers">
+                    <a>careers</a>
                   </Link>
                 </ul>
               </nav>
@@ -126,6 +126,7 @@ const ApplicationForm = () => {
           <label>Designation</label>
           <select
             name="designation"
+            className="select-field"
             value={formData.designation}
             onChange={handleChange}
             required
@@ -138,11 +139,12 @@ const ApplicationForm = () => {
           </select>
         </div>
 
-        <div className="field">
+        <div className="field1">
           <label>Resume</label>
           <input
             type="file"
             name="resume"
+            className="file-upload"
             onChange={handleChange}
             accept=".pdf,.doc,.docx"
           />
