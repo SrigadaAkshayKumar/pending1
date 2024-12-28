@@ -141,9 +141,9 @@ function Landingpage() {
                 <Link to="/Careers">
                   <li>Careers</li>
                 </Link>
-                <Link to="/Contact">
-                  <li>Contact us</li>
-                </Link>
+                {/* <Link to="/Contact"> */}
+                  <a href="/Contact"> <li>Contact us</li> </a>
+                {/* </Link> */}
               </ul>
             </nav>
           </div>
@@ -313,7 +313,7 @@ function Landingpage() {
       <section className="sec-contact">
         <h2>Contact us</h2>
         <div className="contact-section">
-          <div className="contact-form">
+          <div id="contact" className="contact-form">
             <h2>Get in Touch</h2>
             <form>
               <input type="text" placeholder="Your Name" required />
