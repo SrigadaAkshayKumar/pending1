@@ -25,11 +25,13 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Anon from "./data/Anon.png";
-import Loruki from "./data/Loruki.png";
+import Loruki from "./data/Loruki.jpg";
+import Restarent from "./data/Restarent.jpg";
 
 const images = {
   Anon,
   Loruki,
+  Restarent,
 };
 function Landingpage() {
   const serviceCardsRef = useRef(null);

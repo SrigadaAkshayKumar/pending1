@@ -60,8 +60,9 @@ body {
   margin: 0;
 }
 .logo img {
-  height: 100px;
-  width: 160px;
+  margin-top: 1rem;
+  height: 80px;
+  width: 200px;
   cursor: pointer;
 }
 .header-right {
@@ -373,6 +374,7 @@ nav ul a:hover {
   opacity: 1;
 }
 .project-details {
+  cursor: pointer;
   padding: 2rem;
   margin: 0;
 }
@@ -629,7 +631,7 @@ nav ul a:hover {
 
 .footer-column img.footer-logo {
   max-width: 150px;
-  margin: 10px 0;
+  margin: 1.5rem 0;
   cursor: pointer;
 }
 
@@ -873,6 +875,7 @@ nav ul a:hover {
   .technology-solutions1 p {
     padding: 1rem 0;
     width: 100%;
+    font-size: 0.8rem;
   }
   .scroll-button {
     top: 220%;
@@ -918,6 +921,11 @@ nav ul a:hover {
 @media (max-width: 500px) {
   .overlay-content img {
     width: 500px;
+  }
+  .logo img {
+    margin: 0;
+    width: 150px;
+    height: 60px;
   }
   .overlay-content {
     display: flex;
@@ -974,14 +982,14 @@ nav ul a:hover {
     padding-right: 1rem;
   }
   .technology-solutions1 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .sec-services h1 {
     font-size: 2.2rem;
     padding: 2rem 0;
   }
   .scroll-button {
-    top: 245%;
+    top: 243%;
   }
   .stats-section {
     padding: 2rem 0.8rem;

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./data/Logo.png";
+import { db } from "../firebaseConfig"; // Adjust path if necessary
+import { ref, push } from "firebase/database";
 
-const ApplicationForm = () => {
+const Application = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -12,6 +14,7 @@ const ApplicationForm = () => {
     designation: "",
     resume: null,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -21,9 +24,39 @@ const ApplicationForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (isSubmitting) return; // Prevent multiple submissions
+    setIsSubmitting(true);
+
+    try {
+      // Save form data to Firebase Realtime Database
+      const applicationsRef = ref(db, "applications");
+      await push(applicationsRef, {
+        ...formData,
+        resume: formData.resume ? formData.resume.name : null, // Save only the file name
+        submittedAt: new Date().toISOString(),
+      });
+
+      alert("Application submitted successfully!");
+
+      // Reset form data after successful submission
+      setFormData({
+        fullName: "",
+        email: "",
+        mobile: "",
+        gender: "",
+        languages: "",
+        designation: "",
+        resume: null,
+      });
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Error submitting application. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,7 +83,6 @@ const ApplicationForm = () => {
       </header>
       <form onSubmit={handleSubmit} className="form">
         <h2 className="title">Application Form</h2>
-
         <div className="field">
           <label>Full Name</label>
           <input
@@ -62,7 +94,6 @@ const ApplicationForm = () => {
             required
           />
         </div>
-
         <div className="field">
           <label>Email</label>
           <input
@@ -74,7 +105,6 @@ const ApplicationForm = () => {
             required
           />
         </div>
-
         <div className="field">
           <label>Mobile Number</label>
           <input
@@ -86,7 +116,6 @@ const ApplicationForm = () => {
             required
           />
         </div>
-
         <div className="field">
           <label>Gender</label>
           <div className="radio-group">
@@ -110,7 +139,6 @@ const ApplicationForm = () => {
             </label>
           </div>
         </div>
-
         <div className="field">
           <label>Languages Known</label>
           <input
@@ -121,7 +149,6 @@ const ApplicationForm = () => {
             placeholder="e.g., English, Hindi, Telugu"
           />
         </div>
-
         <div className="field">
           <label>Designation</label>
           <select
@@ -138,7 +165,6 @@ const ApplicationForm = () => {
             <option value="other">Other</option>
           </select>
         </div>
-
         <div className="field1">
           <label>Resume</label>
           <input
@@ -150,13 +176,12 @@ const ApplicationForm = () => {
           />
           <p className="note">Accepted formats: PDF, DOC, DOCX</p>
         </div>
-
-        <button type="submit" className="btn">
-          Submit Application
+        <button type="submit" className="btn" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit Application"}
         </button>
       </form>
     </div>
   );
 };
 
-export default ApplicationForm;
+export default Application;
