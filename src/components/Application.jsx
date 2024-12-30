@@ -19,6 +19,7 @@ const Application = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
+  const [uploadStatus, setUploadStatus] = useState("");
 
   // Extract job title from the query parameter
   useEffect(() => {
@@ -35,12 +36,22 @@ const Application = () => {
       ...prev,
       [name]: type === "file" ? files[0] : value,
     }));
+
+    if (type === "file" && files.length > 0) {
+      setUploadStatus(`Selected file: ${files[0].name}`);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (isSubmitting) return; // Prevent multiple submissions
+    if (!formData.resume) {
+      setPopupMessage("Please upload a resume before submitting.");
+      setShowPopup(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -53,21 +64,39 @@ const Application = () => {
         submittedAt: new Date().toISOString(),
       });
 
-      setPopupMessage("Application submitted successfully!");
-      setShowPopup(true);
-
-      // Reset form data after successful submission
-      setFormData({
-        fullName: "",
-        email: "",
-        mobile: "",
-        gender: "",
-        languages: "",
-        designation: "",
-        resume: null,
+      // Send form data to backend for email service
+      const emailFormData = new FormData();
+      emailFormData.append("resume", formData.resume); // Ensure "resume" matches Multer's field name
+      Object.entries(formData).forEach(([key, value]) => {
+        if (key !== "resume") emailFormData.append(key, value);
       });
+
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        body: emailFormData,
+      });
+
+      if (response.ok) {
+        setPopupMessage("Application submitted successfully!");
+        setShowPopup(true);
+
+        // Reset form data
+        setFormData({
+          fullName: "",
+          email: "",
+          mobile: "",
+          gender: "",
+          languages: "",
+          designation: "",
+          resume: null,
+        });
+        setUploadStatus("");
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to submit application.");
+      }
     } catch (error) {
-      console.error("Error adding document: ", error);
+      console.error("Error submitting application:", error);
       setPopupMessage("Error submitting application. Please try again.");
       setShowPopup(true);
     } finally {
@@ -112,8 +141,13 @@ const Application = () => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="form">
+      <form
+        onSubmit={handleSubmit}
+        className="form"
+        encType="multipart/form-data"
+      >
         {jobTitle && <h2 className="title">Application for: {jobTitle}</h2>}
+
         <div className="field">
           <label>Full Name</label>
           <input
@@ -149,26 +183,17 @@ const Application = () => {
         </div>
         <div className="field">
           <label>Gender</label>
-          <div className="radio-group">
-            <label className="radio">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                onChange={handleChange}
-              />
-              <span>Male</span>
-            </label>
-            <label className="radio">
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                onChange={handleChange}
-              />
-              <span>Female</span>
-            </label>
-          </div>
+          <select
+            name="gender"
+            value={formData.gender}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
         <div className="field">
           <label>Languages Known</label>
@@ -182,19 +207,14 @@ const Application = () => {
         </div>
         <div className="field">
           <label>Designation</label>
-          <select
+          <input
+            type="text"
             name="designation"
-            className="select-field"
             value={formData.designation}
             onChange={handleChange}
+            placeholder="Enter Designation"
             required
-          >
-            <option value="">Select Designation</option>
-            <option value="student">Student</option>
-            <option value="btech">B.Tech</option>
-            <option value="mtech">M.Tech</option>
-            <option value="other">Other</option>
-          </select>
+          />
         </div>
         <div className="field1">
           <label>Resume</label>
@@ -204,7 +224,9 @@ const Application = () => {
             className="file-upload"
             onChange={handleChange}
             accept=".pdf,.doc,.docx"
+            required
           />
+          <p>{uploadStatus}</p>
           <p className="note">Accepted formats: PDF, DOC, DOCX</p>
         </div>
         <button type="submit" className="btn" disabled={isSubmitting}>
