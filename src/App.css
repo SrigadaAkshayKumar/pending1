@@ -904,6 +904,37 @@ nav ul a:hover {
   animation: spin 2s linear infinite;
 }
 
+/* Errorpage css */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.error-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.error-page p {
+  font-size: 18px;
+}
+
+.error-page a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.error-page a:hover {
+  text-decoration: underline;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
