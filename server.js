@@ -79,8 +79,8 @@ app.post("/send-email", upload.single("resume"), async (req, res) => {
     const mailOptionsToUser = {
       from: process.env.GMAIL_USER,
       to: email,
-      subject: `Application Received: ${fullName}`,
-      text: `Hello ${fullName},\n\nThank you for your submission. We have received your application and will be reviewing it shortly.\n\nBest regards,\nelvix`,
+      subject: `Internship Application Received - Elevix`,
+      text: `Hello ${fullName},\n\nThank you for applying for the internship opportunity at Elevix. We have successfully received your application and will begin reviewing it shortly.\n\nOur team carefully reviews all applications, and we will get back to you as soon as possible with the next steps. If your profile matches the requirements for the role, we will contact you directly to arrange an interview.\n\nWe appreciate your interest in joining Elevix and your patience throughout this process.\n\nThank you again, and we look forward to being in touch soon!\nBest regards,\nelvix`,
     };
 
     // --- Mail 2: Send application details to admin email ---

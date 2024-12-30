@@ -1,0 +1,843 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3742
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(kay, let's create a 100-day web development roadmap for an intermediate-level) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(learner.  This roadmap assumes you have some foundational knowledge of HTML,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(CSS, and JavaScript.  We'll focus on building upon that foundation and exploring) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(more advanced concepts and technologies.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(Phase 1: Solidifying the Fundamentals \(Days 1-20\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(• Days 1-5:  Advanced CSS & Responsive Design Deep Dive:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 586.7718897637794271 Td
+(    • Refresher on CSS Selectors, Specificity, and the Cascade.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(    • Mastering Flexbox and Grid for responsive layouts.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(    • Introduction to CSS Preprocessors \(Sass or Less\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(    • Practice building complex responsive layouts.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(• Days 6-10: JavaScript Mastery:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 445.0396062992125508 Td
+(    • Advanced JavaScript concepts: closures, prototypal inheritance, `this`) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 416.69314960629913 Td
+(keyword.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(    • Working with the DOM \(Document Object Model\) manipulation efficiently.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 360.0002362204724022 Td
+(    • Asynchronous JavaScript \(Promises, Async/Await\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 331.6537795275589815 Td
+(    • Advanced JavaScript array methods and functional programming techniques.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 303.3073228346455608 Td
+(• Days 11-15:  Testing and Debugging:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 274.9608661417322537 Td
+(    • Setting up a development environment with debugging tools \(browsers') Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 246.614409448818833 Td
+(developer tools\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 218.2679527559054122 Td
+(    • Introduction to unit testing frameworks \(Jest, Mocha\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(    • Best practices for writing clean, testable code.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(• Days 16-20: Version Control \(Git & GitHub\):) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 133.2285826771652637 Td
+(    • Advanced Git commands \(branching, merging, rebasing\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 104.882125984251843 Td
+(    • Using GitHub for collaboration and project management.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 76.5356692913385359 Td
+(    • Understanding pull requests and code reviews.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 3511
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(Phase 2: Backend Development \(Days 21-60\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 700.15771653543311 Td
+(• Days 21-30: Choosing a Backend Framework:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(    • Select a backend framework \(Node.js with Express.js, Python with) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 643.4648031496062686 Td
+(Django/Flask, Ruby on Rails, etc.\) based on your interests and career goals. ) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(Research and choose one to focus on.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 586.7718897637794271 Td
+(    • Learn the fundamentals of your chosen framework: routing, controllers,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(models.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(    • Build simple RESTful APIs.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(• Days 31-40: Database Management:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(    • Choose a database \(SQL or NoSQL - PostgreSQL, MySQL, MongoDB, etc.\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 445.0396062992125508 Td
+(    • Learn SQL \(if choosing a relational database\) or the query language for your) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 416.69314960629913 Td
+(NoSQL database.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(    • Learn about database design principles \(normalization, schema design\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 360.0002362204724022 Td
+(    • Build and interact with a database using your chosen framework.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 331.6537795275589815 Td
+(• Days 41-50:  Authentication and Authorization:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 303.3073228346455608 Td
+(    • Implement secure user authentication \(e.g., using JWTs\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 274.9608661417322537 Td
+(    • Implement authorization to control access to resources.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 246.614409448818833 Td
+(    • Secure your API against common vulnerabilities \(e.g., SQL injection, cross-site) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 218.2679527559054122 Td
+(scripting\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(• Days 51-60:  Deployment and Hosting:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(    • Learn how to deploy your applications to a hosting provider \(Netlify, Heroku,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 133.2285826771652637 Td
+(AWS, Google Cloud, etc.\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 104.882125984251843 Td
+(    • Understand different deployment strategies \(e.g., continuous) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 76.5356692913385359 Td
+(integration/continuous deployment\).) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 3157
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(    • Configure your server for production.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(Phase 3:  Frontend Frameworks & Advanced Concepts \(Days 61-100\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(• Days 61-75:  Choosing and Learning a Frontend Framework:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 643.4648031496062686 Td
+(    • Select a popular JavaScript framework \(React, Angular, Vue.js\).  Focus on) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(ONE.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 586.7718897637794271 Td
+(    • Learn the fundamentals of your chosen framework: components, state) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(management, routing.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(    • Build several small-to-medium-sized applications using the framework.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(• Days 76-85:  State Management:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(    • Deep dive into state management techniques within your chosen framework) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 445.0396062992125508 Td
+(\(Redux, Context API \(React\), Vuex, NgRx\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 416.69314960629913 Td
+(    • Build more complex applications that manage a lot of data.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(• Days 86-95: Advanced topics \(choose 2-3\):) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 360.0002362204724022 Td
+(    • Server-Side Rendering \(SSR\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 331.6537795275589815 Td
+(    • WebSockets and Real-time Applications) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 303.3073228346455608 Td
+(    • Progressive Web Apps \(PWAs\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 274.9608661417322537 Td
+(    • Testing frameworks specific to your chosen frontend framework.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 246.614409448818833 Td
+(• Days 96-100:  Capstone Project:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 218.2679527559054122 Td
+(    • Build a significant web application that integrates everything you've learned) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(over the 100 days.  This should be a project that challenges you and showcases) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(your skills.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 76.5356692913385359 Td
+(Important Considerations:) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 1239
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(• Consistency is key: Dedicate time each day, even if it's just for a short period.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(• Practice regularly:  Build projects, experiment, and don't be afraid to make) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(mistakes.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 700.15771653543311 Td
+(• Seek help when needed: Utilize online resources, communities, and mentors.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(• Stay updated: Web development is constantly evolving, so continuous learning is) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 643.4648031496062686 Td
+(crucial.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(This is a suggested roadmap; adjust it based on your learning pace and interests.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(Remember to celebrate your progress along the way!undefined) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 2.5.2)
+/CreationDate (D:20241117002111+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000012422 00000 n 
+0000014262 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000003946 00000 n 
+0000004083 00000 n 
+0000007646 00000 n 
+0000007783 00000 n 
+0000010992 00000 n 
+0000011130 00000 n 
+0000012497 00000 n 
+0000012623 00000 n 
+0000012754 00000 n 
+0000012888 00000 n 
+0000013026 00000 n 
+0000013150 00000 n 
+0000013279 00000 n 
+0000013411 00000 n 
+0000013547 00000 n 
+0000013675 00000 n 
+0000013802 00000 n 
+0000013931 00000 n 
+0000014064 00000 n 
+0000014166 00000 n 
+0000014515 00000 n 
+0000014601 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <FC66311B090971D32B5DE982A0EC2A51> <FC66311B090971D32B5DE982A0EC2A51> ]
+>>
+startxref
+14705
+%%EOF

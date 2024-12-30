@@ -1,0 +1,745 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3480
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(kay, here's a possible roadmap for learning Python in 50 days at an intermediate) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(level.  This assumes you already have some foundational Python knowledge) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(\(variables, data types, basic control flow, functions\).  Adjust the pacing as needed) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(to fit your learning style.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(Week 1-2: Solidifying Fundamentals & Object-Oriented Programming \(OOP\)) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(• Days 1-3: Review core Python concepts. Practice with more complex data) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 586.7718897637794271 Td
+(structures like dictionaries and sets, and  work on challenging problems involving) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(lists and tuples.  Focus on list comprehensions and generator expressions for) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(efficiency.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(• Days 4-7: Deep dive into Object-Oriented Programming \(OOP\). Master classes,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(objects, inheritance, polymorphism, encapsulation, and abstraction.  Build small) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 445.0396062992125508 Td
+(projects that utilize these concepts \(e.g., a simple inventory management system) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 416.69314960629913 Td
+(or a game with different character classes\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(• Days 8-10:  Explore different OOP design patterns \(e.g., Singleton, Factory,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 360.0002362204724022 Td
+(Observer\) and understand when to apply them. Practice implementing these) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 331.6537795275589815 Td
+(patterns in your projects.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 246.614409448818833 Td
+(Week 3-4:  Working with Files and Data) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(• Days 11-14: Master file I/O operations: reading and writing different file formats) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(\(text, CSV, JSON\).  Practice error handling \(try-except blocks\) for robust file) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 133.2285826771652637 Td
+(processing.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 104.882125984251843 Td
+(• Days 15-18: Learn about working with databases. Start with SQLite for simplicity,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 76.5356692913385359 Td
+(then explore connecting to other databases \(e.g., PostgreSQL, MySQL\) using) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 3422
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(appropriate libraries like SQLAlchemy. Learn basic SQL commands for data) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(manipulation.  Focus on efficient database interactions.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(• Days 19-21: Data manipulation and cleaning with Pandas. Learn data structures) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(\(Series, DataFrames\), data cleaning techniques \(handling missing values, data) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 700.15771653543311 Td
+(transformation\), and data analysis basics \(aggregation, grouping\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(Week 5-6:  Advanced Concepts and Libraries) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(• Days 22-25: Explore more advanced Python features: decorators, metaclasses,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(context managers \(with statement\). Understand their uses and applications.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(• Days 26-29:  Work with at least one external library relevant to your interests) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(\(e.g., NumPy for numerical computation, Matplotlib/Seaborn for data visualization,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 445.0396062992125508 Td
+(Requests for web scraping, Beautiful Soup for HTML parsing\).  Build small) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 416.69314960629913 Td
+(projects utilizing these libraries.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(• Days 30-32: Learn about testing your code. Explore unit testing frameworks like) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 360.0002362204724022 Td
+(pytest or unittest.  Write unit tests for your previous projects.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 274.9608661417322537 Td
+(Week 7-8:  Building Larger Projects &  Concurrency/Parallelism) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 218.2679527559054122 Td
+(• Days 33-38: Choose a substantial project that integrates many of the concepts) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(you've learned. This could be a web application \(using Flask or Django\), a data) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(analysis project, a game, or anything else that interests you. Break down the) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 133.2285826771652637 Td
+(project into smaller, manageable tasks.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 104.882125984251843 Td
+(• Days 39-42: Learn about concurrency and parallelism in Python.  Explore) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 76.5356692913385359 Td
+(threading and multiprocessing to improve performance for computationally) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 2848
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(intensive tasks.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 728.5041732283464171 Td
+(Week 9-10:  Deployment and Further Learning) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 671.8112598425196893 Td
+(• Days 43-46: Learn about deploying your project. This might involve deploying a) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 643.4648031496062686 Td
+(web application to a platform like Heroku or AWS, or packaging your project for) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 615.1183464566928478 Td
+(distribution.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 586.7718897637794271 Td
+(• Days 47-49:  Review all the concepts covered. Identify areas where you need) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 558.42543307086612 Td
+(more practice.  Start exploring more advanced topics based on your interests \(e.g.,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 530.0789763779526993 Td
+(asynchronous programming, machine learning with scikit-learn\).) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 501.7325196850393354 Td
+(• Day 50: Celebrate your accomplishment!  Reflect on your learning journey and) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 473.3860629921259147 Td
+(plan for your next steps in Python development.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 388.3466929133857661 Td
+(Important Considerations:) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 331.6537795275589815 Td
+(• Practice Regularly: Consistent daily practice is crucial.  Aim for at least 1-2 hours) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 303.3073228346455608 Td
+(of coding each day.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 274.9608661417322537 Td
+(• Work on Projects: Building projects is essential for applying your knowledge and) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 246.614409448818833 Td
+(solidifying your understanding.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 218.2679527559054122 Td
+(• Use Online Resources: Leverage online resources like documentation, tutorials,) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 189.9214960629919915 Td
+(and forums \(Stack Overflow\) to overcome challenges.) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 161.5750393700786844 Td
+(• Seek Feedback: Share your code with others \(peers, mentors\) to get feedback) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 133.2285826771652637 Td
+(and improve your skills.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 527
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 813.5435433070865656 Td
+(This is a flexible roadmap; adjust the time allocation for each section based on) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 785.1970866141732586 Td
+(your strengths and weaknesses. Remember to focus on understanding the) Tj
+ET
+BT
+/F1 14 Tf
+16.0999999999999979 TL
+0 g
+28.3464566929133888 756.8506299212598378 Td
+(underlying concepts rather than just memorizing syntax. Good luck!undefined) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 2.5.2)
+/CreationDate (D:20241117120205+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000011049 00000 n 
+0000012889 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000003684 00000 n 
+0000003821 00000 n 
+0000007295 00000 n 
+0000007432 00000 n 
+0000010332 00000 n 
+0000010470 00000 n 
+0000011124 00000 n 
+0000011250 00000 n 
+0000011381 00000 n 
+0000011515 00000 n 
+0000011653 00000 n 
+0000011777 00000 n 
+0000011906 00000 n 
+0000012038 00000 n 
+0000012174 00000 n 
+0000012302 00000 n 
+0000012429 00000 n 
+0000012558 00000 n 
+0000012691 00000 n 
+0000012793 00000 n 
+0000013142 00000 n 
+0000013228 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <FE0B15A8F6A6D2F37A9CF91C2E5F35B8> <FE0B15A8F6A6D2F37A9CF91C2E5F35B8> ]
+>>
+startxref
+13332
+%%EOF

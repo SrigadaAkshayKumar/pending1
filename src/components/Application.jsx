@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./data/Logo.png";
 import { db } from "../firebaseConfig"; // Adjust path if necessary
 import { ref, push } from "firebase/database";
+import Loading from "./Loading";
 
 const Application = () => {
   const location = useLocation();
@@ -126,7 +127,7 @@ const Application = () => {
           </div>
         </div>
       </header>
-
+      {isSubmitting && <Loading />}
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
