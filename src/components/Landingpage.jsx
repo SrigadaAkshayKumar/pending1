@@ -2,9 +2,39 @@ import React, { useEffect, useState, useRef } from "react";
 import videoSrc from "./data/home_video.mp4";
 import image1 from "./data/image1.png";
 import Logo from "./data/Logo.png";
+import Mainpage from "./data/Mainpage.png";
+import Projectflow from "./data/Project-flow.png";
 import projects from "./projects.json";
+import web from "./data/web.png";
+import App from "./data/App.png";
+import Marketing from "./data/marketing.png";
+import Socialmedia from "./data/social-media.png";
+import Bot from "./data/bot.png";
+import Grafhic from "./data/grafic.png";
+import Seo from "./data/seo.png";
+import Software from "./data/software-dev.png";
+import Uiux from "./data/uiux.png";
+import Analytics from "./data/analytics.png";
+import datascraping from "./data/data-scraping.png";
 import { Link } from "react-router-dom";
+import { db } from "../firebaseConfig";
+import { ref, push } from "firebase/database";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faInstagram,
+  faFacebook,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import Anon from "./data/Anon.png";
+import Loruki from "./data/Loruki.jpg";
+import Restarent from "./data/Restarent.jpg";
 
+const images = {
+  Anon,
+  Loruki,
+  Restarent,
+};
 function Landingpage() {
   const serviceCardsRef = useRef(null);
   const scrollInterval = useRef(null);
@@ -27,6 +57,34 @@ function Landingpage() {
       });
       resetAutoScroll(); // Reset auto-scroll when manually scrolled
     }
+  };
+  useEffect(() => {
+    startAutoScroll();
+
+    const handleTouchStart = () => clearInterval(scrollInterval.current);
+    const handleTouchEnd = () => resetAutoScroll();
+
+    const element = serviceCardsRef.current;
+
+    if (element) {
+      element.addEventListener("touchstart", handleTouchStart);
+      element.addEventListener("touchend", handleTouchEnd);
+    }
+
+    return () => {
+      clearInterval(scrollInterval.current);
+      if (element) {
+        element.removeEventListener("touchstart", handleTouchStart);
+        element.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, []);
+
+  const [showAll, setShowAll] = useState(false);
+
+  // Toggle between showing all projects or only the first 3
+  const toggleProjects = () => {
+    setShowAll((prevState) => !prevState);
   };
 
   const startAutoScroll = () => {
@@ -124,27 +182,93 @@ function Landingpage() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  // contact form
+
+  const [contactData, setContactData] = useState({
+    name: "",
+    phone: "",
+    countryCode: "+91",
+    email: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Save data to Firebase Realtime Database
+      const clientRef = ref(db, "client");
+      await push(clientRef, {
+        ...contactData,
+        submittedAt: new Date().toISOString(),
+      });
+
+      setPopupMessage("Message sent successfully!");
+      setShowPopup(true);
+
+      setContactData({
+        name: "",
+        phone: "",
+        countryCode: "+91",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting message:", error);
+      setPopupMessage("Failed to send message. Please try again.");
+      setShowPopup(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="app-container">
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <button
+              className="close-button"
+              onClick={() => setShowPopup(false)}
+            >
+              ×
+            </button>
+            <p>{popupMessage}</p>
+          </div>
+        </div>
+      )}
       {/* Header Section */}
       <header className="header">
         <div className="header-content">
-          <div className="logo">
-            <a href="/">
-              <img src="" alt="Logo" />
-            </a>
-          </div>
-          <div className="header-right">
-            <nav>
-              <ul>
-                <Link to="/Careers">
-                  <li>Careers</li>
-                </Link>
-                <Link to="/Contact">
-                  <li>Contact us</li>
-                </Link>
-              </ul>
-            </nav>
+          <div className="header-right-content">
+            <div className="logo">
+              <a href="/">
+                <img src={Logo} alt="Logo" />
+              </a>
+            </div>
+            <div className="header-right">
+              <nav>
+                <ul>
+                  <Link to="/Careers">
+                    <a>Careers</a>
+                  </Link>
+                  <a href="#contact">Contact us</a>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -156,131 +280,155 @@ function Landingpage() {
           Your browser does not support the video tag.
         </video>
         <div className="overlay-content">
-          <h2>OPTIMIZING PATIENT CARE</h2>
-          <p>
-            We use the depth of IT services and business consulting for
-            healthcare to improve outcomes.
-          </p>
+          <img src={Mainpage} alt="text" />
         </div>
       </section>
 
       {/* Technology Solutions Section */}
       <section className="technology-solutions">
-        <div className="technology-solutions1">
-          <h2>TECHNOLOGY SOLUTIONS</h2>
-          <p>
-            We use the depth of IT services and business consulting for
-            healthcare to improve outcomes.
-          </p>
-        </div>
-        <div className="technology-solutions2">
-          <img src={image1} alt="image" />
+        <div className="technology-solutions-12">
+          <div className="technology-solutions1">
+            <h1>IT SOLUTIONS</h1>
+            <p>
+              We leverage the full breadth of advanced IT services and expert
+              business consulting tailored specifically for the healthcare
+              industry, driving innovation and optimizing processes to enhance
+              patient outcomes, streamline operations, and elevate
+              overall care quality.
+            </p>
+          </div>
+          <div className="technology-solutions2">
+            <img src={image1} alt="image" />
+          </div>
         </div>
       </section>
 
       {/* Services Overview Section */}
       <section className="sec-services">
-        <h2>Our Services</h2>
-        <button className="scroll-button left" onClick={scrollLeft}>
-          &#8249;
-        </button>
-        <div className="service-cards" ref={serviceCardsRef}>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
+        <h1>WE PROVIDE</h1>
+        <div className="scroll-card">
+          <button className="scroll-button left" onClick={scrollLeft}>
+            &#8249;
+          </button>
+          <div className="service-cards" ref={serviceCardsRef}>
+            <div className="card">
+              <div className="card-img">
+                <img src={web} alt="img" />
+              </div>
+              <div>
+                <h3>Web Development</h3>
+                <p>Expert consulting for healthcare organizations.</p>
+              </div>
             </div>
-            <div>
-              <h3>Web Development</h3>
-              <p>Expert consulting for healthcare organizations.</p>
+            <div className="card">
+              <div className="card-img">
+                <img src={App} alt="img" />
+              </div>
+              <div>
+                <h3>App Development</h3>
+                <p>Customized IT solutions tailored to your needs.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Marketing} alt="img" />
+              </div>
+              <div>
+                <h3>Marketing</h3>
+                <p>We built personalized AI chatbots.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Socialmedia} alt="img" />
+              </div>
+              <div>
+                <h3>Social Media Management</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Bot} alt="img" />
+              </div>
+              <div>
+                <h3>Custom Bots</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Grafhic} alt="img" />
+              </div>
+              <div>
+                <h3>Graphic Design</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Seo} alt="img" />
+              </div>
+              <div>
+                <h3>SEO & SEM</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Software} alt="img" />
+              </div>
+              <div>
+                <h3>Software Development</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Uiux} alt="img" />
+              </div>
+              <div>
+                <h3>UI/UX Design</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Analytics} alt="img" />
+              </div>
+              <div>
+                <h3> Data Analytics</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={datascraping} alt="img" />
+              </div>
+              <div>
+                <h3>Data Scrapping</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
             </div>
           </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Analysis</h3>
-              <p>Customized IT solutions tailored to your needs.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Building AI Models</h3>
-              <p>We built personalized AI chatbots.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Python Development</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div>
-              <img src="" alt="img" />
-            </div>
-            <div>
-              <h3>Data Collection / Scraping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
+          <button className="scroll-button right" onClick={scrollRight}>
+            &#8250;
+          </button>
         </div>
-        <button className="scroll-button right" onClick={scrollRight}>
-          &#8250;
-        </button>
       </section>
 
       {/* Partners Section */}
       <section className="sec-flow">
-        <h2>project flow</h2>
-        <div className="partner-logos">{/* Add partner logos here */}</div>
+        <div>
+          <h1>Work Flow</h1>
+        </div>
+        <div className="partner-logos">
+          <img src={Projectflow} alt="image" />
+        </div>
       </section>
 
       {/* Project Count Section */}
       <section className="sec-project-count">
-        <h2>project count</h2>
         <div ref={sectionRef} className="stats-section">
           <h2>Building Relationships With Clients All Over The World!</h2>
           <div className="stats-container">
@@ -311,55 +459,93 @@ function Landingpage() {
       </section>
 
       {/* Project list Section */}
-      <section className="projects-section">
-        <h2 className="section-title">Our work</h2>
+      <section id="work" className="projects-section">
+        <h2 className="section-title">Our Work</h2>
         <div className="projects-container">
-          {projects.map((project, index) => (
+          {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
             <div className="project-card" key={index}>
               <img
-                src={`images/${project.image}.jpg`}
+                src={images[project.image]}
                 alt={project.title}
                 className="project-image"
               />
-              <div className="project-details">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <p>
-                  <strong>Technologies:</strong> {project.technologies}
-                </p>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  View Demo
-                </a>
+              <div className="project-overlay">
+                <div className="project-details">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <p>
+                    <strong>Technologies:</strong> {project.technologies}
+                  </p>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    View Demo
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
+        <button className="toggle-button" onClick={toggleProjects}>
+          {showAll ? "Show Less" : "View More"}
+        </button>
       </section>
 
       {/* contact form Section */}
-      <section className="sec-contact">
-        <h2>Contact us</h2>
+      <section id="contact" className="sec-contact">
         <div className="contact-section">
           <div className="contact-form">
             <h2>Get in Touch</h2>
-            <form>
-              <input type="text" placeholder="Your Name" required />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={contactData.name}
+                onChange={handleChange}
+                required
+              />
               <div className="phone-input">
-                <select>
+                <select
+                  name="countryCode"
+                  value={contactData.countryCode}
+                  onChange={handleChange}
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
-                <input type="text" placeholder="Phone Number" required />
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  name="phone"
+                  value={contactData.phone}
+                  onChange={handleChange}
+                  required
+                />
               </div>
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                value={contactData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                className="message-box"
+                placeholder="Your Message"
+                name="message"
+                value={contactData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
             </form>
           </div>
           <div className="contact-info">
@@ -368,23 +554,42 @@ function Landingpage() {
               <strong>Address:</strong> Hyderabad, India
             </p>
             <p>
-              <strong>Phone:</strong> +91 910326779
+              <strong>Phone:</strong> +91 9346011959
             </p>
             <p>
-              <strong>Email:</strong> trivedaofficial@gmail.com
+              <strong>Email:</strong> contactelevix@gmail.com
             </p>
             <p>
               <strong>Follow us:</strong>
             </p>
-            <div className="social-icons">
-              <a href="#">
-                <i className="fab fa-linkedin"></i>
+            <div className="icons">
+              <a
+                href="https://www.linkedin.com/in/elevix-solutions-404863343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="#">
-                <i className="fab fa-instagram"></i>
+              <a
+                href="https://www.instagram.com/elevixsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#">
-                <i className="fab fa-x-twitter"></i>
+              <a
+                href="https://www.facebook.com/profile.php?id=61571230323372&mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faXTwitter} />
               </a>
             </div>
           </div>
@@ -412,6 +617,78 @@ function Landingpage() {
               )}
             </div>
           ))}
+        </div>
+      </section>
+      {/* Section Footer */}
+      <section className="footer">
+        <div className="footer-top">
+          <div className="footer-column">
+            <a href="/">
+              <img src={Logo} alt="Logo" className="footer-logo" />
+            </a>
+            <div className="icons">
+              <a
+                href="https://www.linkedin.com/in/elevix-solutions-404863343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://www.instagram.com/elevixsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61571230323372&mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faXTwitter} />
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#work">Our Work</a>
+              </li>
+              <li>
+                <a href="/careers">Careers</a>
+              </li>
+              <li>
+                <a href="#contact">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h3>Contact Us</h3>
+            <p>
+              <strong>Email :&nbsp;&nbsp;</strong>
+              <a href="mailto:contactelevix@gmail.com">
+                contactelevix@gmail.com
+              </a>
+            </p>
+            <p>
+              <strong>Phone :&nbsp;</strong>
+              <a href="tel:+919110326779">+91 9346011959</a>
+            </p>
+          </div>
         </div>
       </section>
     </div>

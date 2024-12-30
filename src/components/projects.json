@@ -1,32 +1,32 @@
 [
   {
-    "title": "Descriptive Analysis of Cricket Player Stats – Virat Kohli",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and Data Scraping tools",
-    "image": "cricket"
+    "title": "Anon : E-commerce website",
+    "technologies": "An e-commerce platform featuring secure payments and an intuitive user interface.",
+    "image": "Anon"
   },
   {
-    "title": "Department of DataScience Results Analysis",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and selenium",
-    "image": "result"
+    "title": "Loruki : Web Hosting Service",
+    "technologies": "A reliable website hosting service offering fast, secure, and scalable solutions.",
+    "image": "Loruki"
   },
   {
-    "title": "Descriptive Analysis of Cricket Player Stats – Virat Kohli",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and Data Scraping tools",
-    "image": "cricket"
+    "title": "Carls : A Restaurant website",
+    "technologies": "A dynamic restaurant website with online menu, reservations, and location features.",
+    "image": "Restarent"
   },
   {
-    "title": "Department of DataScience Results Analysis",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and selenium",
-    "image": "result"
+    "title": "Anon : E-commerce website",
+    "technologies": "An e-commerce platform featuring secure payments and an intuitive user interface.",
+    "image": "Anon"
   },
   {
-    "title": "Descriptive Analysis of Cricket Player Stats – Virat Kohli",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and Data Scraping tools",
-    "image": "cricket"
+    "title": "Loruki : Web Hosting Service",
+    "technologies": "A reliable website hosting service offering fast, secure, and scalable solutions.",
+    "image": "Loruki"
   },
   {
-    "title": "Department of DataScience Results Analysis",
-    "technologies": "pandas, Numpy, Matplotlib, Seaborn, Jupyter Notebook and selenium",
-    "image": "result"
+    "title": "Carls : A Restaurant website",
+    "technologies": "A dynamic restaurant website with online menu, reservations, and location features.",
+    "image": "Restarent"
   }
 ]
