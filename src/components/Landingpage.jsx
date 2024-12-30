@@ -17,6 +17,8 @@ import Uiux from "./data/uiux.png";
 import Analytics from "./data/analytics.png";
 import datascraping from "./data/data-scraping.png";
 import { Link } from "react-router-dom";
+import { db } from "../firebaseConfig";
+import { ref, push } from "firebase/database";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -56,6 +58,27 @@ function Landingpage() {
       resetAutoScroll(); // Reset auto-scroll when manually scrolled
     }
   };
+  useEffect(() => {
+    startAutoScroll();
+
+    const handleTouchStart = () => clearInterval(scrollInterval.current);
+    const handleTouchEnd = () => resetAutoScroll();
+
+    const element = serviceCardsRef.current;
+
+    if (element) {
+      element.addEventListener("touchstart", handleTouchStart);
+      element.addEventListener("touchend", handleTouchEnd);
+    }
+
+    return () => {
+      clearInterval(scrollInterval.current);
+      if (element) {
+        element.removeEventListener("touchstart", handleTouchStart);
+        element.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, []);
 
   const [showAll, setShowAll] = useState(false);
 
@@ -159,8 +182,74 @@ function Landingpage() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  // contact form
+
+  const [contactData, setContactData] = useState({
+    name: "",
+    phone: "",
+    countryCode: "+91",
+    email: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Save data to Firebase Realtime Database
+      const clientRef = ref(db, "client");
+      await push(clientRef, {
+        ...contactData,
+        submittedAt: new Date().toISOString(),
+      });
+
+      setPopupMessage("Message sent successfully!");
+      setShowPopup(true);
+
+      setContactData({
+        name: "",
+        phone: "",
+        countryCode: "+91",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting message:", error);
+      setPopupMessage("Failed to send message. Please try again.");
+      setShowPopup(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="app-container">
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <button
+              className="close-button"
+              onClick={() => setShowPopup(false)}
+            >
+              ×
+            </button>
+            <p>{popupMessage}</p>
+          </div>
+        </div>
+      )}
       {/* Header Section */}
       <header className="header">
         <div className="header-content">
@@ -217,113 +306,115 @@ function Landingpage() {
       {/* Services Overview Section */}
       <section className="sec-services">
         <h1>WE PROVIDE</h1>
-        <button className="scroll-button left" onClick={scrollLeft}>
-          &#8249;
-        </button>
-        <div className="service-cards" ref={serviceCardsRef}>
-          <div className="card">
-            <div className="card-img">
-              <img src={web} alt="img" />
+        <div className="scroll-card">
+          <button className="scroll-button left" onClick={scrollLeft}>
+            &#8249;
+          </button>
+          <div className="service-cards" ref={serviceCardsRef}>
+            <div className="card">
+              <div className="card-img">
+                <img src={web} alt="img" />
+              </div>
+              <div>
+                <h3>Web Development</h3>
+                <p>Expert consulting for healthcare organizations.</p>
+              </div>
             </div>
-            <div>
-              <h3>Web Development</h3>
-              <p>Expert consulting for healthcare organizations.</p>
+            <div className="card">
+              <div className="card-img">
+                <img src={App} alt="img" />
+              </div>
+              <div>
+                <h3>App Development</h3>
+                <p>Customized IT solutions tailored to your needs.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Marketing} alt="img" />
+              </div>
+              <div>
+                <h3>Marketing</h3>
+                <p>We built personalized AI chatbots.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Socialmedia} alt="img" />
+              </div>
+              <div>
+                <h3>Social Media Management</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Bot} alt="img" />
+              </div>
+              <div>
+                <h3>Custom Bots</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Grafhic} alt="img" />
+              </div>
+              <div>
+                <h3>Graphic Design</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Seo} alt="img" />
+              </div>
+              <div>
+                <h3>SEO & SEM</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Software} alt="img" />
+              </div>
+              <div>
+                <h3>Software Development</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Uiux} alt="img" />
+              </div>
+              <div>
+                <h3>UI/UX Design</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={Analytics} alt="img" />
+              </div>
+              <div>
+                <h3> Data Analytics</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-img">
+                <img src={datascraping} alt="img" />
+              </div>
+              <div>
+                <h3>Data Scrapping</h3>
+                <p>Streamline operations for maximum efficiency.</p>
+              </div>
             </div>
           </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={App} alt="img" />
-            </div>
-            <div>
-              <h3>App Development</h3>
-              <p>Customized IT solutions tailored to your needs.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Marketing} alt="img" />
-            </div>
-            <div>
-              <h3>Marketing</h3>
-              <p>We built personalized AI chatbots.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Socialmedia} alt="img" />
-            </div>
-            <div>
-              <h3>Social Media Management</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Bot} alt="img" />
-            </div>
-            <div>
-              <h3>Custom Bots</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Grafhic} alt="img" />
-            </div>
-            <div>
-              <h3>Graphic Design</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Seo} alt="img" />
-            </div>
-            <div>
-              <h3>SEO & SEM</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Software} alt="img" />
-            </div>
-            <div>
-              <h3>Software Development</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Uiux} alt="img" />
-            </div>
-            <div>
-              <h3>UI/UX Design</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={Analytics} alt="img" />
-            </div>
-            <div>
-              <h3> Data Analytics</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={datascraping} alt="img" />
-            </div>
-            <div>
-              <h3>Data Scrapping</h3>
-              <p>Streamline operations for maximum efficiency.</p>
-            </div>
-          </div>
+          <button className="scroll-button right" onClick={scrollRight}>
+            &#8250;
+          </button>
         </div>
-        <button className="scroll-button right" onClick={scrollRight}>
-          &#8250;
-        </button>
       </section>
 
       {/* Partners Section */}
@@ -408,28 +499,53 @@ function Landingpage() {
         <div className="contact-section">
           <div className="contact-form">
             <h2>Get in Touch</h2>
-            <form>
-              <input type="text" placeholder="Your Name" required />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={contactData.name}
+                onChange={handleChange}
+                required
+              />
               <div className="phone-input">
-                <select>
+                <select
+                  name="countryCode"
+                  value={contactData.countryCode}
+                  onChange={handleChange}
+                >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
                 </select>
                 <input
-                  className="phone-input"
                   type="text"
                   placeholder="Phone Number"
+                  name="phone"
+                  value={contactData.phone}
+                  onChange={handleChange}
                   required
                 />
               </div>
-              <input type="email" placeholder="Your Email" required />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                value={contactData.email}
+                onChange={handleChange}
+                required
+              />
               <textarea
                 className="message-box"
                 placeholder="Your Message"
+                name="message"
+                value={contactData.message}
+                onChange={handleChange}
                 required
               ></textarea>
-              <button type="submit">Send Message</button>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
             </form>
           </div>
           <div className="contact-info">
@@ -448,21 +564,21 @@ function Landingpage() {
             </p>
             <div className="icons">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/elevix-solutions-404863343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/elevixsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=61571230323372&mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -512,21 +628,21 @@ function Landingpage() {
             </a>
             <div className="icons">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/elevix-solutions-404863343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/elevixsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=61571230323372&mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
               >

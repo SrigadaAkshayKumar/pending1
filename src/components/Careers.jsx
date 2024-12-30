@@ -37,7 +37,9 @@ function Careers() {
                 <strong>Location:</strong> {job.location}
               </p>
               <p>{job.description}</p>
-              <Link to="/Application">
+              <Link
+                to={`/application?jobTitle=${encodeURIComponent(job.title)}`}
+              >
                 <button type="submit">Apply Now</button>
               </Link>
             </div>

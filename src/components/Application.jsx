@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "./data/Logo.png";
 import { db } from "../firebaseConfig"; // Adjust path if necessary
 import { ref, push } from "firebase/database";
 
 const Application = () => {
+  const location = useLocation();
+  const [jobTitle, setJobTitle] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -15,6 +17,17 @@ const Application = () => {
     resume: null,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+
+  // Extract job title from the query parameter
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const jobTitleFromParams = params.get("jobTitle");
+    if (jobTitleFromParams) {
+      setJobTitle(decodeURIComponent(jobTitleFromParams));
+    }
+  }, [location.search]);
 
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -35,11 +48,13 @@ const Application = () => {
       const applicationsRef = ref(db, "applications");
       await push(applicationsRef, {
         ...formData,
+        jobTitle,
         resume: formData.resume ? formData.resume.name : null, // Save only the file name
         submittedAt: new Date().toISOString(),
       });
 
-      alert("Application submitted successfully!");
+      setPopupMessage("Application submitted successfully!");
+      setShowPopup(true);
 
       // Reset form data after successful submission
       setFormData({
@@ -53,7 +68,8 @@ const Application = () => {
       });
     } catch (error) {
       console.error("Error adding document: ", error);
-      alert("Error submitting application. Please try again.");
+      setPopupMessage("Error submitting application. Please try again.");
+      setShowPopup(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -73,7 +89,7 @@ const Application = () => {
               <nav>
                 <ul>
                   <Link to="/careers">
-                    <a>careers</a>
+                    <a>Careers</a>
                   </Link>
                 </ul>
               </nav>
@@ -81,8 +97,23 @@ const Application = () => {
           </div>
         </div>
       </header>
+
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <p>{popupMessage}</p>
+            <button
+              className="close-button"
+              onClick={() => setShowPopup(false)}
+            >
+              x
+            </button>
+          </div>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="form">
-        <h2 className="title">Application Form</h2>
+        {jobTitle && <h2 className="title">Application for: {jobTitle}</h2>}
         <div className="field">
           <label>Full Name</label>
           <input
